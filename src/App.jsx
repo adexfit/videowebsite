@@ -5,7 +5,7 @@ import FeaturedMov from './components/FeaturedMov/FeaturedMov'
 import Footer from './components/Footer/Footer'
 
 function App() {
-  const [videoData, setvideoData] = React.useState(0)
+  const [videoData, setvideoData] = useState(0)
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/top_rated")
@@ -20,9 +20,10 @@ function App() {
         <FeaturedMov/>
         <Footer/>
 
-        <div>
+        {/* <div>
           <pre>{JSON.stringify(videoData, null, 2)}</pre>
-        </div>
+        </div> */}
+
       </section> 
 
     </>
