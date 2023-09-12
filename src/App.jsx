@@ -1,10 +1,18 @@
-// import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Hero from './components/Hero/Hero'
 import './App.css'
 import FeaturedMov from './components/FeaturedMov/FeaturedMov'
 import Footer from './components/Footer/Footer'
 
 function App() {
+  const [videoData, setvideoData] = React.useState(0)
+
+  useEffect(() => {
+    fetch("https://api.themoviedb.org/3/movie/top_rated")
+        .then(res => res.json())
+        .then(data => setvideoData(data))
+    }, [])
+
   return (
     <>
       <section className='hero__div'>
@@ -12,7 +20,11 @@ function App() {
         <FeaturedMov/>
         <Footer/>
 
-      </section>
+        <div>
+          <pre>{JSON.stringify(videoData, null, 2)}</pre>
+        </div>
+      </section> 
+
     </>
   )
 }

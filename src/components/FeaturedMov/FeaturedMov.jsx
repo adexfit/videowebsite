@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import rightarr from '../../assets/rightarr.png'
 import Card from '../Card/Card'
 import './FeaturedMov.css'
+
+
 
 const FeaturedMov = () => {
   return (

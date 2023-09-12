@@ -1,5 +1,5 @@
 .featured__block {
-    margin: 70px 95px 0px 95px;
+    margin: 5rem 2rem 0px 2rem;
     min-height: 900px;
 }
 
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 400;
     font-family: inherit;
 }
@@ -22,7 +22,7 @@
 }
 
 #header2 {
-    font-size: 36px;
+    font-size: 2.2rem;
     font-weight: 700;
     font-family: inherit;
 }
@@ -30,9 +30,73 @@
 .card__wrap {
     width: 100%;
     display: grid;
-    row-gap: 100px;
+    row-gap: 5rem;
     grid-template-columns: auto auto auto auto;
+    grid-column-gap:1.5rem;
     grid-template-rows: auto auto auto;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .card__wrap {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .featured__block {
+        margin: 5rem 2rem 0rem 2rem;
+    }
+
+    #header2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .card__wrap {
+        width: 100%;
+        display: grid;
+        row-gap: 100px;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .card__wrap {
+        width: 100%;
+        display: grid;
+        row-gap: 100px;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .card__wrap {
+        width: 100%;
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: auto auto auto;
+        /* grid-template-rows: auto auto auto; */
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .card__wrap {
+        width: 100%;
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+        /* grid-template-rows: auto auto auto; */
+    }
 }
 
 
