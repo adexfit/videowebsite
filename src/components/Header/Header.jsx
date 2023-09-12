@@ -5,7 +5,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div className='header__container'>
+    <section className='header__container'>
         <div className='logo__div'>
             <img src={logomov} alt="logo image" className='logo__img'/>
             <p>Movie Box</p>
@@ -21,7 +21,7 @@ const Header = () => {
           <img src={menu} alt="mobilenav" />
         </div>
 
-    </div>
+    </section>
   )
 }
 

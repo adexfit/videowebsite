@@ -1,0 +1,74 @@
+
+h1 {
+    line-height: 56px;
+}
+
+.hero__div {
+    height: 600px;
+    width: 100%;
+    background-image: url('../../assets/Poster.png');
+}
+
+.hero__text {
+    display: grid;
+    color: var(--white);
+    width: 404px;
+    padding: 0px 10px 0px 95px;
+}
+
+.hero__text p, .hero__text h1 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.hero__text button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border: 6px;
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.hero__text button:hover {
+    background-color: var(--light-pink);
+}
+
+.hero__text .btnico {
+    padding-right: 8px;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    margin-top: -28px;
+}
+
+.label p {
+    padding-right: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label img {
+    padding-right: 10px;
+}
+
+
+
+@media(max-width: 992px){
+    .hero__text {
+        display: grid;
+        width: 80%;
+        padding: 0px 10px 0px 10px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero__text button {
+        margin: auto;
+    }
+
+}

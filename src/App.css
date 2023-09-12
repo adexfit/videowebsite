@@ -1,3 +1,21 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
+:root {
+  --pink: #BE123C;
+  --light-pink: #bf2e53;
+  --white: #fff;
+  --container-width-lg: 100%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+  --transition: all 400ms ease;
+}
+
+#root {
+  width: var(--container-width-lg);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
 
 

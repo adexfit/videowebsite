@@ -1,12 +1,16 @@
 // import { useState } from 'react'
-import Header from './components/Header/Header'
+import Hero from './components/Hero/Hero'
 import './App.css'
+import FeaturedMov from './components/FeaturedMov/FeaturedMov'
 
 function App() {
   return (
     <>
-        <Header />
-        <p>Hello world</p>
+      <section className='hero__div'>
+        <Hero />
+        <FeaturedMov/>
+
+      </section>
     </>
   )
 }

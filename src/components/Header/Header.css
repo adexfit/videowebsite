@@ -1,14 +1,13 @@
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
 
 .header__container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: black;
-    max-width: 100%;
-    padding: 22px 90px 22px 90px;
+    justify-content: space-around;
+    width: auto;
+    margin: auto;
+    padding: 22px 0px 22px 0px;
 
 }
 
@@ -23,6 +22,7 @@
 .logo__div p {
     font-size: 24px;
     font-weight: 700;
+    color: var(--white);
 }
 
 .logo__img {
@@ -42,7 +42,8 @@ input[type='search'] {
     border: 2px solid #D1D5DB;
     border-radius: 6px;
     text-indent: 10px;
-}
+    background-color: transparent;
+}    
 
 .search__block {
     position: relative;
@@ -76,4 +77,20 @@ input[type='search'] {
     padding-right: 27px;
     font-size: 16px;
     font-weight: 700;
+    color: var(--white);
+}
+
+
+@media(max-width: 992px){
+    .header__container { 
+        flex-direction: column;
+        width: auto;
+    }
+
+        /* --- Search field --- */
+    input[type='search'] {
+        width: 300px;
+
+    }  
+
 }
