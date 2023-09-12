@@ -1,6 +1,49 @@
 
-.bg{
-    background-color: #c4c4c4;
+.card{
+    display: block;
+    justify-content: left;
     width: 250px;
-    height: 490px;
+    height: auto;
+    line-height: 12px;
+
+}
+
+.card__sticker {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__sticker p {
+    padding-right: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0;
+}
+
+.card__sticker img {
+    padding-right: 10px;
+}
+
+.card__sticker p {
+    color: var(--deep-black);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.country {
+    color: var(--light-grey);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var();
+}
+
+.genre {
+    color: var(--light-grey); 
+    font-weight: 700;
 }

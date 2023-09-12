@@ -1,8 +1,24 @@
+.featured__block {
+    margin: 70px 95px 0px 95px;
+    min-height: 900px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+}
 
 #seemore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     font-weight: 400;
     font-family: inherit;
+}
+
+#seemore a {
+    color: var(--pink);
 }
 
 #header2 {
@@ -10,3 +26,13 @@
     font-weight: 700;
     font-family: inherit;
 }
+
+.card__wrap {
+    width: 100%;
+    display: grid;
+    row-gap: 100px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+
