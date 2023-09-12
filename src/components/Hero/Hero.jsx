@@ -8,7 +8,7 @@ import apple from '../../assets/apple.png'
 
 const Hero = () => {
   return (
-    <div className='hero__div' >
+    <section className='hero__div' >
         <Header/>
 
         <div className='hero__text'>
@@ -25,7 +25,7 @@ const Hero = () => {
             </button>
         </div>
 
-    </div>
+    </section>
   )
 }
 
