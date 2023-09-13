@@ -17,7 +17,6 @@ const FeaturedMov = () => {
 
     const videoElement = videoData.slice(0,10).map(video => {
       return <Card poster_path={video.poster_path} 
-              original_language={video.original_language} 
               release_date ={video.release_date} 
               original_title = {video.original_title}
               vote_average = {video.vote_average}
