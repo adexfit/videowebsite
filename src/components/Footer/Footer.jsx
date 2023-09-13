@@ -20,6 +20,7 @@ const Footer = () => {
             <p>Press Room</p>
         </span>
         <p id='copyright'>2021 MovieBox by Adriana Eka Prayudha</p>
+
     </div>
   )
 }

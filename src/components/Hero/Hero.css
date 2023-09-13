@@ -20,6 +20,7 @@ h1 {
     padding: 0px 10px 0px 95px;
 }
 
+
 .hero__text p, .hero__text h1 {
     font-family: 'DM Sans', sans-serif;
 }
@@ -85,3 +86,12 @@ h1 {
     }
 
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 500px) {
+    .hero__text h1 {
+        margin-top: 1rem;
+    }
+}
+

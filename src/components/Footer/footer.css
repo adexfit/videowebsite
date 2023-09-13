@@ -62,3 +62,16 @@
     }
 }
 
+/*
+  const [videoData, setvideoData] = useState(0)
+
+  useEffect(() => {
+    fetch("https://api.themoviedb.org/3/movie/top_rated")
+        .then(res => res.json())
+        .then(data => setvideoData(data))
+    }, [])
+
+         <div>
+          <pre>{JSON.stringify(videoData, null, 2)}</pre>
+        </div> 
+*/
