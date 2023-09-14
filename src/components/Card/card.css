@@ -5,6 +5,7 @@
     width: 250px;
     height: auto;
     line-height: 12px;
+    position: relative;
 
 }
 
@@ -52,4 +53,10 @@
 .genre {
     color: var(--light-grey); 
     font-weight: 700;
+}
+
+.favico {
+    position: absolute;
+    top: 10px;
+    left: 165px;
 }

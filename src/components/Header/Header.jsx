@@ -11,8 +11,8 @@ const Header = () => {
             <p>Movie Box</p>
         </div>
 
-        <div class="search__block">
-          <span class="fa fa-search"></span>
+        <div className="search__block">
+          <span className="fa fa-search"></span>
           <input type="search" placeholder="What do you want to watch?" />
         </div>
 

@@ -4,26 +4,37 @@ import Card from '../Card/Card'
 import './FeaturedMov.css'
 
 
-
 const FeaturedMov = () => {
   const [videoData, setvideoData] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    
-    fetch("https://api.themoviedb.org/3/movie/top_rated/?api_key=21d1982e9f358e5f3273a53ce4d65108")
-        .then(res => res.json())
-        .then(data => setvideoData(data.results))
-    }, [])
 
-    const videoElement = videoData.slice(0,10).map(video => {
-      return <Card poster_path={video.poster_path} 
-              release_date ={video.release_date} 
-              original_title = {video.original_title}
-              vote_average = {video.vote_average}
-              vote_count = {video.vote_count}              
-              key={video.id} />
+  try {
+    useEffect(() => {  
+      setIsLoading(true)
 
-    }) 
+      fetch("https://api.themoviedb.org/3/movie/top_rated/?api_key=21d1982e9f358e5f3273a53ce4d65108")
+          .then(res => res.json())
+          .then(data => setvideoData(data.results))
+      }, [])
+
+
+  } catch (error) {
+    // TypeError: Failed to fetch
+    setIsLoading(false)
+    console.log('There was an error', error);
+  }
+
+
+  const videoElement = videoData.slice(0,10).map(video => {
+    return <Card poster_path={video.poster_path} 
+            release_date ={video.release_date} 
+            original_title = {video.original_title}
+            vote_average = {video.vote_average}
+            vote_count = {video.vote_count}              
+            key={video.id} />
+
+  }) 
   
 
 
@@ -42,9 +53,9 @@ const FeaturedMov = () => {
 
       </section>
 
-        <div>
+        {/* <div>
           <pre>{JSON.stringify(videoData, null, 2)}</pre>
-        </div> 
+        </div>  */}
     </div>
   )
 }
