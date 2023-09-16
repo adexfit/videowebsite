@@ -4,6 +4,7 @@ import FeaturedMov from './components/FeaturedMov/FeaturedMov'
 import Dashboard from './components/Dashboard/Dashboard'
 //import { Route, Routes } from 'react-router-dom'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import axios from "axios";
 
 function App() {
   const [videoData, setvideoData] = useState([])
@@ -18,6 +19,14 @@ function App() {
         .then(data => setvideoData(data.results))
         // setIsLoading(false)
     }, [])
+
+    // useEffect(() => {
+    //   axios.get("https://api.themoviedb.org/3/movie/top_rated/?api_key=21d1982e9f358e5f3273a53ce4d65108").then((response) => {
+    //     setvideoData(response.data);
+    //   });
+    // }, []);
+  
+    // if (!videoData) return null;
 
 
   return (

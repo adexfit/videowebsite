@@ -10,6 +10,7 @@ import Star from '../../assets/Star.png'
 import bestmovie from '../../assets/bestmovie.png'
 import Rectangle from '../../assets/Rectangle.png'
 import { useParams } from 'react-router-dom'
+import axios from "axios";
 
 
 
@@ -26,6 +27,12 @@ const Dashboard = () => {
         .then(data => setnewData(data.results.find(ob => ob.id == id)))
 
     }, [])
+
+    // useEffect(() => {
+    //   axios.get("https://api.themoviedb.org/3/movie/top_rated/?api_key=21d1982e9f358e5f3273a53ce4d65108").then((response) => {
+    //     setnewData(response.data.results.find(ob => ob.id == id));
+    //   });
+    // }, []);
 
     // let dateUT = new Date(newData.release_date).toISOString()
     // console.log(dateUT)
