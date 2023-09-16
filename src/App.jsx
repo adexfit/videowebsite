@@ -21,12 +21,14 @@ function App() {
 
 
   return (
-    <>   
-      <Routes>
-        <Route path='/' element={ <FeaturedMov videoData={videoData} isLoading={isLoading} /> } />
-        <Route path='/movies/:id' element={ <Dashboard /> } /> 
-      </Routes>
-
+    <>
+      {/* <BrowserRouter
+      basename={import.meta.env.DEV ? '/' : '/videowebsite/'}>      */}
+        <Routes>
+          <Route path='/' element={ <FeaturedMov videoData={videoData} isLoading={isLoading} /> } />
+          <Route path='/movies/:id' element={ <Dashboard /> } /> 
+        </Routes>
+      {/* </BrowserRouter>  */}
     </>
   )
 }
