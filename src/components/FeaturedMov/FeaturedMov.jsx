@@ -1,62 +1,51 @@
 import React, { useState, useEffect } from 'react'
 import rightarr from '../../assets/rightarr.png'
 import Card from '../Card/Card'
+import Footer from '../Footer/Footer'
 import './FeaturedMov.css'
+import Hero from '../Hero/Hero'
 
 
-const FeaturedMov = () => {
-  const [videoData, setvideoData] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+const FeaturedMov = (props) => {
 
-
-  try {
-    useEffect(() => {  
-      setIsLoading(true)
-
-      fetch("https://api.themoviedb.org/3/movie/top_rated/?api_key=21d1982e9f358e5f3273a53ce4d65108")
-          .then(res => res.json())
-          .then(data => setvideoData(data.results))
-      }, [])
-
-
-  } catch (error) {
-    // TypeError: Failed to fetch
-    setIsLoading(false)
-    console.log('There was an error', error);
-  }
-
-
-  const videoElement = videoData.slice(0,10).map(video => {
+  const videoElement = props.videoData.slice(0,10).map(video => {
     return <Card poster_path={video.poster_path} 
-            release_date ={video.release_date} 
-            original_title = {video.original_title}
-            vote_average = {video.vote_average}
-            vote_count = {video.vote_count}              
-            key={video.id} />
+                release_date ={video.release_date} 
+                original_title = {video.original_title}
+                vote_average = {video.vote_average}
+                vote_count = {video.vote_count}
+                our_id = {video.id}            
+                key={video.id} />
 
   }) 
   
 
 
   return (
-    <div className='featured__block'>
-      <header className='card__header'>
-        <h2 id='header2'>Featured Movie</h2>
-        <p id='seemore'>
-            <a href="">See more</a>
-            <img src={rightarr} alt="right arrow" />
-        </p>
-      </header>
+    <>
+      <Hero />
+      <div className='featured__block'>
+          <header className='card__header'>
+            <h2 id='header2'>Featured Movie</h2>
+            <p id='seemore'>
+                <a href="">See more</a>
+                <img src={rightarr} alt="right arrow" />
+            </p>
+          </header>
 
-      <section className='card__wrap'>
-        {videoElement}
+          <section className='card__wrap'>
+          {!props.isLoading && videoElement } 
+          {props.isLoading && <p>Loading..</p>}
+          {/* {props.videoData == [] && <p>Could not fetch data</p>} */}
 
-      </section>
+          </section>
 
-        {/* <div>
-          <pre>{JSON.stringify(videoData, null, 2)}</pre>
-        </div>  */}
-    </div>
+            {/* <div>
+              <pre>{JSON.stringify(props.videoData, null, 2)}</pre>
+            </div>  */}
+        </div> 
+        <Footer/>
+    </>
   )
 }
 

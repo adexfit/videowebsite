@@ -1,5 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
+
+.dashboard__container{
+    display: grid;
+    padding: 50px;
+}
+
+.divider__block {
+    display: grid;
+    grid-template-columns: 70% auto;
+
+}
+
+.right__div {
+    margin-right: 10px;
+}
+
+.left__div {
+    
+}
+
+.rigthnav__card {
+    width: 130px;
+    border: 1px solid var(--light-pink);
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    margin-bottom: 44px;
+
+}
+
+.dashboard__content {
+    padding: 24px;
+    display: grid;
+}
+
+.dp__image {
+    width: 100%;
+    align-self: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex img {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+
+.primary {
+    background-color: var(--light-pink);
+    color: var(--white);
+}
+
+.secondary {
+    background-color: var(--white);
+    color: var(--deep-black);
+    border: 1px solid var(--light-pink);
+}
+
+.block {
+    display: grid;
+}
+
+
+/*
+
+    grid-template-columns: 15rem auto;
+    row-gap: 10px;
+
 #logo__text {
     color: var(--deep-black);
     font-size: 1.2rem;
@@ -11,11 +84,6 @@
     flex-direction: row;
 }
 
-.dashboard__container{
-    display: grid;
-    grid-template-columns: 15rem auto;
-    row-gap: 10px;
-}
 
 .right__nav{
     padding: 10px;
@@ -48,14 +116,6 @@ nav {
     margin-bottom: 30px;
 }
 
-.rigthnav__card {
-    width: 130px;
-    border: 1px solid var(--light-pink);
-    border-radius: 20px 20px 20px 20px;
-    padding: 10px;
-    margin-bottom: 44px;
-
-}
 
 .rigthnav__card {
     
@@ -67,12 +127,44 @@ nav {
     font-weight: 400;
 }
 
-.dashboard__content {
-    padding: 24px;
-}
-
-.dp__image {
-    width: 100%;
-}
 
 
+
+
+      <div className='right__nav'>
+        <div className='logonav__div'>
+            <img src={logomov} alt="logo image" className='logo__img'/>
+            <p id='logo__text'>Movie Box</p>
+        </div>
+        <nav>
+          <li>
+            <img src={Homeicon} alt="Home" />
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <img src={Movieicon} alt="Movie" />
+            <a href="#">Movie</a>
+          </li>
+          <li>
+            <img src={TVicon} alt="Series" />
+            <a href="#">Tv Series</a>
+          </li>
+          <li>
+            <img src={upcomingicon} alt="Upcoming" />
+            <a href="#">Upcoming</a>
+          </li>
+        </nav>
+
+        <div className='rigthnav__card'>
+          <h5>Play movie quizes and earn free tickets</h5>
+          <p>50k people are playing now</p>
+          <button className='Start__play'>Start playing</button>
+        </div>
+
+        <div>
+          <img src="" alt="" />
+          <a href="">Logout</a>
+        </div>
+      </div>
+
+*/
