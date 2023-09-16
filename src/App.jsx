@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import FeaturedMov from './components/FeaturedMov/FeaturedMov'
 import Dashboard from './components/Dashboard/Dashboard'
-import { Route, Routes } from 'react-router-dom'
+//import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   const [videoData, setvideoData] = useState([])
@@ -20,11 +21,14 @@ function App() {
 
 
   return (
-    <>      
-      <Routes>
-        <Route path='/' element={ <FeaturedMov videoData={videoData} isLoading={isLoading} /> } />
-        <Route path='/movies/:id' element={ <Dashboard /> } /> 
-      </Routes>
+    <>
+      <BrowserRouter
+      basename={import.meta.env.DEV ? '/' : '/videowebsite/'}>     
+        <Routes>
+          <Route path='/' element={ <FeaturedMov videoData={videoData} isLoading={isLoading} /> } />
+          <Route path='/movies/:id' element={ <Dashboard /> } /> 
+        </Routes>
+      </BrowserRouter> 
     </>
   )
 }
