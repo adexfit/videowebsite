@@ -34,8 +34,8 @@ const FeaturedMov = (props) => {
           </header>
 
           <section className='card__wrap'>
-          {!props.isLoading && videoElement } 
-          {props.isLoading && <p>Loading..</p>}
+          {videoElement } 
+          {/* {props.isLoading && <p>Loading..</p>} */}
           {/* {props.videoData == [] && <p>Could not fetch data</p>} */}
 
           </section>
